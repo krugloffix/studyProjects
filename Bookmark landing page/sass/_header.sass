@@ -1,0 +1,50 @@
+.header
+    padding-top: 48px
+    &__container
+        display: grid
+        grid-template-columns: repeat(2, fit-content(100%))
+        align-items: center
+        justify-content: space-between
+    &__logo
+        display: inline-block
+        width: 148px
+        height: 25px
+        background: url('../images/logo-bookmark.svg')
+    &__menu
+        display: grid
+        grid-template-columns: repeat(2, fit-content(100%))
+        align-items: center
+        gap: 48px
+    &__list
+        margin: 0
+        padding: 0
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 44px
+    &-item
+        text-transform: uppercase
+        font-size: 13px
+        line-height: 17px
+        letter-spacing: 1.5px
+        color: #242A45
+        transition: color .2s ease-in
+        &:hover
+            color: #FA5959
+    &__login
+        padding: 10px 30px
+        font-weight: 500
+        font-size: 13px
+        text-transform: uppercase
+        line-height: 17px
+        letter-spacing: 1.5px
+        color: #FFFFFF
+        background: #FA5959
+        box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20012)
+        border: 2px solid #FA5959
+        border-radius: 5px
+        transition: color .3s ease-in, background .3s ease-in
+        &:hover
+            color: #FA5959
+            background: #fff
+    &__socials
+        display: none

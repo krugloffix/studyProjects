@@ -1,0 +1,41 @@
+@media only screen and (max-width : 992px) {
+    html {
+        font-size: 20px;
+    }
+    .wrapper {
+        width: 520px;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 50px auto;
+    }
+}
+
+@media only screen and (max-width : 575px) {
+    html {
+        font-size: 20px;
+    }
+    .wrapper {
+        width: 400px;
+        margin: 50px auto;
+        padding: 35px 20px;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    html {
+        font-size: 18px;
+    }
+    .wrapper {
+        width: 350px;
+        margin: 50px auto;
+        padding: 35px 20px;
+    }
+    .tip__options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .right-part div {
+        padding: 10px 20px;
+    }
+    .reset {
+        margin-top: 20px;
+    }
+}

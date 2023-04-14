@@ -1,0 +1,122 @@
+.burger
+    position: relative
+    display: none
+    justify-self: end
+    width: 32px
+    height: 18px
+    border: none
+    background-color: transparent
+    cursor: pointer
+    padding: 0
+
+.burger__line
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+    width: 100%
+    height: 2px
+    background-color: #fff
+    transition: opacity .2s linear
+
+.burger:before,
+.burger:after
+    content: ''
+    position: absolute
+    left: 0
+    background-color: #fff
+    width: 100%
+    height: 2px
+    transition: transform .3s linear
+
+.burger:before
+    top: 0
+
+.burger:after
+    bottom: 0
+
+.burger--active .burger__line
+    opacity: 0
+
+.burger--active:before
+    top: 50%
+    transform: rotate(45deg)
+
+.burger--active:after
+    bottom: auto
+    top: 50%
+    transform: rotate(-45deg)
+
+.stop--scroll
+    overflow: hidden
+
+@media only screen and (max-width : 768px)
+    .burger
+        display: block
+    .burger-menu
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        padding: 30px
+        position: fixed
+        right: -150%
+        top: 143px
+        z-index: 10
+        width: 80vw
+        height: fit-content
+        background: #FFFFFF
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444)
+        border-radius: 5px
+        transition: transform .6s ease-in-out
+    .burger-menu--active
+        transform: translateX(-200%)
+    .header__nav
+        margin-left: 0
+    .header__nav:after
+        content: ''
+        display: block
+        width: 100%
+        height: 1px
+        background: #E8E4E4
+        margin-bottom: 24px
+    .header__list
+        display: flex
+        flex-direction: column
+        font-weight: 600
+        font-size: 18px
+        line-height: 28px
+        text-align: center
+        color: #1F3E5A
+        gap: 24px
+    .header__item
+        background-image: url('../images/icon-arrow-dark.svg')
+        background-position: right center
+        background-repeat: no-repeat
+        padding-right: 0
+    .header-item
+        background-position: right top
+        &__list
+            height: 0
+            width: 100%
+            background: rgba(45, 46, 64, 0.08)
+            font-weight: 600
+            font-size: 16px
+            line-height: 28px
+            color: #1F3E5A
+            box-shadow: none
+            position: static
+    .header__item--selected
+        .header-item__list
+            height: fit-content
+    .header__links
+        display: flex
+        flex-direction: column
+    .header-links
+        gap: 24px
+        &__login
+            font-weight: 600
+            font-size: 18px
+            line-height: 28px
+            text-align: center
+            color: #1F3E5A
+            opacity: 1

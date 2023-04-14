@@ -1,0 +1,55 @@
+.footer
+    background-color: #242A45
+    &__container
+        display: grid
+        grid-template-columns: fit-content(100%) 1fr 1fr
+        grid-template-rows: 90px
+        gap: 60px
+        align-items: center
+
+    &__logo
+        display: inline-block
+        width: 148px
+        height: 25px
+        svg
+            width: 148px
+            height: 25px
+
+    &__list
+        margin: 0
+        padding: 0
+        display: grid
+        grid-template-columns: repeat(3, fit-content(100%))
+        gap: 44px
+
+    &-item
+        text-transform: uppercase
+        font-size: 13px
+        line-height: 17px
+        letter-spacing: 1.5px
+        color: #FFFFFF
+        transition: color .3s ease-in
+        &:hover
+            color: #FA5959
+
+    &-socials
+        justify-self: end
+
+        &__list
+            margin: 0
+            padding: 0
+            display: grid
+            grid-template-columns: repeat(2, fit-content(100%))
+            gap: 40px
+            align-items: center
+
+        &__item
+            width: 24px
+            height: 24px
+            svg
+                path
+                    transition: fill .3s ease-in
+            &:hover
+                svg
+                    path
+                        fill: #FA5959

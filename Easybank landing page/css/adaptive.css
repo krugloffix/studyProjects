@@ -1,0 +1,132 @@
+@media only screen and (max-width: 900px) {
+  .btn {
+    padding: 14px 40px 14px 40px;
+    font-size: 18px;
+  }
+  .header__container {
+    grid-template-columns: repeat(2, fit-content(100%));
+  }
+  .header__btn {
+    display: none;
+  }
+  .hero {
+    background: url("../images/bg-intro-desktop.svg") no-repeat left -90px top -420px;
+    top: 0;
+  }
+  .hero__container {
+    grid-template-columns: calc(100vw - 30px);
+    grid-template-rows: repeat(2, fit-content(100%));
+  }
+  .hero-img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    min-height: 600px;
+  }
+  .hero-img__inner {
+    width: 650px;
+    left: calc((100vw - 650px) / 2);
+    top: -270px;
+  }
+  .hero__info {
+    grid-row: 2/3;
+    text-align: center;
+  }
+  .about {
+    top: 80px;
+    padding-top: 80px;
+  }
+  .about__container {
+    text-align: center;
+  }
+  .about__text {
+    margin: 0 auto 56px;
+  }
+  .about__list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 45px;
+  }
+  .about__item {
+    padding: 10px;
+  }
+  .articles {
+    top: 80px;
+    padding-top: 80px;
+  }
+  .articles__title {
+    text-align: center;
+  }
+  .articles__list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 45px;
+    justify-items: center;
+  }
+  .articles-item {
+    width: 255px;
+  }
+  .footer {
+    position: relative;
+    top: 80px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .hero {
+    background: url("../images/bg-intro-mobile.svg") no-repeat right 0 top 0;
+  }
+  .hero-img {
+    min-height: 415px;
+  }
+  .hero-img__inner {
+    max-width: 400px;
+    top: -85px;
+    left: calc((100vw - 400px) / 2);
+  }
+  .about__list {
+    grid-template-columns: 1fr;
+  }
+  .articles__list {
+    grid-template-columns: 1fr;
+  }
+  .footer__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, fit-content(100%));
+    justify-items: center;
+  }
+  .footer__logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .footer-socials__list {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .footer-nav {
+    grid-column: 1/2;
+    grid-row: 3/5;
+    display: block;
+    text-align: center;
+  }
+  .footer__btn {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+  .footer__rights {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .about {
+    padding-top: 30px;
+    top: 0;
+  }
+  .articles {
+    top: 0;
+    padding-top: 30px;
+  }
+  .footer {
+    top: 0;
+  }
+  .footer-nav__item {
+    margin-bottom: 8px;
+  }
+}/*# sourceMappingURL=adaptive.css.map */

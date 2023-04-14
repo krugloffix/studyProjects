@@ -1,0 +1,24 @@
+.infrastructure
+    background: url('../images/bg-pattern-circles.svg') left -220px bottom -80px no-repeat, linear-gradient(135deg, #2D2E40 0%, #3F4164 100%)
+    border-radius: 0px 100px
+
+.infrastructure__container
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+
+.infrastructure__content
+    padding: 100px 0 100px 20px
+    grid-column: 2 / 3
+
+.infrastructure-img
+    grid-column: 1 / 2
+    position: relative
+    &__inner
+        position: absolute
+        top: -70px
+        left: -26px
+        width: 552px
+        height: 579px
+        background-image: url('../images/illustration-phones.svg')
+        background-position: right center
+        background-repeat: no-repeat

@@ -1,0 +1,156 @@
+.stop-scroll
+    overflow: hidden
+
+.burger
+    display: none
+    position: relative
+    width: 32px
+    height: 18px
+    border: none
+    cursor: pointer
+    background-color: transparent
+    padding: 0
+    &-overlay
+        display: none
+    &-line
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+        width: 100%
+        height: 2px
+        background-color: black
+    &::after,
+    &::before
+        content: ''
+        position: absolute
+        left: 0
+        width: 100%
+        height: 2px
+        background-color: black
+        transition: transform .3s linear, background-color .3s linear
+    &::after
+        bottom: 0
+    &::before
+        top: 0
+    &--active .burger-line
+        opacity: 0
+    &--active::before
+        top: 50%
+        transform: rotate(45deg)
+        background-color: #fff
+    &--active::after
+        bottom: auto
+        top: 50%
+        transform: rotate(-45deg)
+        background-color: #fff
+
+@media only screen and (max-width : 768px)
+    .burger
+        display: block
+        z-index: 11
+    .burger-overlay
+        display: block
+        z-index: 10
+        position: absolute
+        top: 0
+        left: 0
+        width: 100vw
+        background: #242A45
+        mix-blend-mode: normal
+        opacity: 0.95
+        backdrop-filter: blur(16.3097px)
+    .burger-overlay--hidden
+        animation: overlayHidden .7s both
+    .burger-overlay--active
+        animation: overlayActive 1.2s both
+    .burger-item
+        width: 100%
+        padding: 24px 0
+        color: #FFFFFF
+        position: relative
+        text-align: center
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            background: #FFFFFF
+            opacity: 0.15
+            width: 100%
+            height: 1px
+        &:last-of-type
+            &::after
+                content: ''
+                position: absolute
+                bottom: 0
+                left: 0
+                background: #FFFFFF
+                opacity: 0.15
+                width: 100%
+                height: 1px
+    .burger-logo
+        z-index: 11
+        animation: headerLogo 1s .02s both
+    .burger-menu
+        display: none
+        position: absolute
+        z-index: 11
+        top: 73px
+        left: 200%
+        width: 60vw
+        height: calc( 100vh - 73px )
+        grid-template-columns: fit-content(100%)
+        grid-template-rows: repeat(3, fit-content(100%))
+        justify-content: center
+        align-content: center
+        justify-items: center
+    .burger-menu--active
+        display: grid
+        left: 50%
+        transform: translateX(-50%)
+        animation: burgerMenu 2s 1s both
+    .burger-list
+        grid-template-columns: 300px
+        grid-template-rows: repeat(3, fit-content(100%))
+        gap: 0
+    .burger-login
+        width: 100%
+        text-align: center
+        background: transparent
+        border-color: #fff
+    .header__socials
+        display: block
+        width: 100%
+    .header-socials__list
+        padding: 0
+        margin: 0
+        display: grid
+        grid-template-columns: repeat(2, fit-content(100%))
+        gap: 40px
+        justify-content: center
+        align-items: baseline
+
+@keyframes overlayHidden
+    0%
+        height: 100vh
+    100%
+        height: 0
+
+@keyframes overlayActive
+    0%
+        height: 0
+    100%
+        height: 100vh
+
+@keyframes headerLogo
+    0%
+        background: url('../images/logo-bookmark.svg')
+    100%
+        background: url('../images/logo-bookmark-white.svg')
+
+@keyframes burgerMenu
+    0%
+        opacity: 0
+    100%
+        opacity: 1

@@ -1,0 +1,27 @@
+.info
+    padding-top: 200px
+    overflow: hidden
+.info__container
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: fit-content(100%) 2fr 1fr
+    row-gap: 93px
+
+.info__content
+    grid-row: 2 / 3
+    padding-left: 20px
+
+.info-img
+    grid-column: 1 / 2
+    grid-row: 1 / 4
+    position: relative
+    &__inner
+        position: absolute
+        left: -390px
+        top: -80px
+        width: 974px
+        height: 786px
+        background-image: url('../images/illustration-laptop-desktop.svg')
+        background-position: left center
+        background-repeat: no-repeat
+        background-size: contain

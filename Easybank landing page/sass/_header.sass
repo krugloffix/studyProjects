@@ -1,0 +1,41 @@
+.header
+    margin: 0
+    position: fixed
+    width: 100%
+    background-color: #fff
+    padding: 18px 0 18px
+    z-index: 1000
+
+    &__container
+        display: grid
+        grid-template-columns: repeat(3, fit-content(100%))
+        align-items: center
+        justify-content: space-between
+
+    &__list
+        list-style: none
+        padding: 0
+        margin: 0
+        display: grid
+        grid-template-columns: repeat(5, fit-content(100%))
+        gap: 30px
+
+    &__item
+        line-height: 16px
+        color: #9597A5
+        transition: color .3s linear
+        position: relative
+        &:hover
+            color: #2D314D
+        &::after
+            content: ''
+            display: block
+            height: 4px
+            width: 100%
+            background: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%)
+            position: absolute
+            bottom: -32px
+            opacity: 0
+            transition: opacity .3s linear
+        &:hover::after
+            opacity: 1

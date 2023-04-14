@@ -1,0 +1,44 @@
+.hero
+    position: relative
+    top: 80px
+    background: url('../images/bg-intro-desktop.svg') no-repeat left calc( (100vw - 1110px) / 2 + 447px + 30px ) top -175px
+    overflow: hidden
+    z-index: 400
+
+    &__container
+        display: grid
+        grid-template-columns: 447px 1fr
+        align-items: center
+
+    &-info
+        grid-column: 1 / 2
+        grid-row: 1 / 2
+        vertical-align: middle
+
+        &__title
+            margin: 0 0 24px
+            font-weight: 300
+            font-size: 56px
+            line-height: 64px
+            color: #2D314D
+
+        &__text
+            margin: 0 0 36px
+            font-weight: 400
+            font-size: 18px
+            line-height: 28px
+            color: #9597A5
+
+    &-img
+        grid-column: 2 / 3
+        min-height: 939px
+        position: relative
+
+        &__inner
+            width: 767px
+            height: 939px
+            position: absolute
+            top: -35px
+            left: 155px
+            background: url('../images/image-mockups.png') no-repeat
+            background-size: contain

@@ -1,0 +1,56 @@
+.articles
+    position: relative
+    z-index: 100
+    top: 0px
+    padding-bottom: 80px
+    background: linear-gradient(#fff 0%, #f3f3f3 100%)
+
+    &__title
+        margin: 0 0 40px
+        font-weight: 300
+        font-size: 40px
+        line-height: 64px
+        color: #2D314D
+
+    &__list
+        margin: 0
+        padding: 0
+        list-style: none
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        gap: 30px
+
+    &-item
+        background: #FFFFFF
+        border-radius: 5px
+        cursor: pointer
+        &:hover
+            .articles-item__title
+                color: #30C88F
+
+        &__img
+            width: 255px
+            height: 200px
+            border-radius: 5px 5px 0 0
+            margin-bottom: 25px
+
+        &__info
+            padding: 0 24px 24px 24px
+
+        &__author
+            font-size: 10px
+            line-height: 18px
+            color: #9597A5
+
+        &__title
+            font-weight: 300
+            font-size: 16px
+            line-height: 20px
+            color: #2D314D
+            transition: color .3s linear
+
+        &__text
+            margin: 0
+            font-size: 13px
+            line-height: 18px
+            color: #9597A5

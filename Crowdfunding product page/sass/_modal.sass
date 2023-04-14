@@ -1,0 +1,200 @@
+main
+    position: relative
+.modal
+    z-index: 20
+    position: absolute
+    top: -170px
+    left: 50%
+    transform: translateX(-50%)
+    &__wrapper
+        padding: 40px
+        display: none
+        grid-template-columns: repeat(2, fit-content(100%))
+        grid-template-rows: repeat(3, fit-content(100%))
+        &--active
+            display: grid
+            animation: opacity .4s both
+    &__title
+        font-size: 24px
+        line-height: 29px
+        grid-column: 1 / 2
+        grid-row: 1 / 2
+
+    &__close
+        grid-column: 2 / 3
+        grid-row: 1 / 2
+        justify-self: end
+        width: 20px
+        height: 20px
+        border: none
+        padding: 0
+        position: relative
+        background-color: transparent
+        cursor: pointer
+        span
+            &::after,
+            &::before
+                content: ''
+                position: absolute
+                left: 0
+                width: 100%
+                height: 5px
+                background-color: rgba(0, 0, 0, .5)
+                transition: transform .3s linear
+            &::before
+                top: 50%
+                transform: rotate(45deg)
+            &::after
+                bottom: auto
+                top: 50%
+                transform: rotate(-45deg)
+
+    &__subtext
+        grid-column: 1 / 3
+        grid-row: 2 / 3
+        line-height: 30px
+
+    &__list
+        padding: 0
+        list-style-type: none
+        grid-column: 1 / 3
+        grid-row: 3 / 4
+
+    &__item
+        display: grid
+        grid-template-columns: repeat(4, fit-content(100%))
+        grid-template-rows: repeat(3, fit-content(100%))
+        padding: 30px 20px 0 20px
+        gap: 17px
+        cursor: pointer
+        border: 2px solid rgba(0, 0, 0, 0.15)
+        border-radius: 8px
+        transition: border .2s linear
+        &:not(:last-child)
+            margin-bottom: 24px
+        &--disabled
+            cursor: not-allowed
+            opacity: .5
+            .modal__check
+                cursor: not-allowed
+            .modal-pledge__continue
+                cursor: not-allowed
+                &:hover
+                    background: #3CB3AB
+            .modal-pledge__input
+                pointer-events: none
+        &--active
+            .modal__check--inner
+                opacity: 1
+            .modal__item
+                border: 2px solid #3cb3ab
+            .modal-pledge
+                display: grid
+
+    &__check
+        grid-column: 1 / 2
+        grid-row: 1 / 2
+        width: 24px
+        height: 24px
+        background: #FFFFFF
+        border: 1px solid rgba(0, 0, 0, 0.15)
+        border-radius: 50%
+        cursor: pointer
+        position: relative
+        &--inner
+            opacity: 0
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            width: 12px
+            height: 12px
+            border-radius: 50%
+            background: #3CB3AB
+            transition: opacity .2s linear
+
+    &__name
+        grid-column: 2 / 3
+        grid-row: 1 / 2
+        margin: 0
+        font-weight: 700
+        line-height: 20px
+
+    &__cost
+        margin: 0
+        grid-column: 3 / 4
+        grid-row: 1 / 2
+        line-height: 20px
+        color: #3CB3AB
+        justify-self: start
+        font-weight: 500
+
+    &__left
+        margin: 0
+        grid-column: 4 / 5
+        grid-row: 1 / 2
+        justify-self: end
+        font-size: 15px
+        line-height: 18px
+        color: #7A7A7A
+        display: flex
+        align-items: center
+        span
+            margin-right: 8px
+            font-weight: 700
+            font-size: 18px
+            line-height: 22px
+            color: #000000
+
+    &__text
+        grid-column: 2 / 5
+        grid-row: 2 / 3
+        font-size: 15px
+        line-height: 28px
+
+    &-pledge
+        display: none
+        grid-column: 2 / 5
+        grid-row: 3 / 4
+        width: 100%
+        grid-template-columns: 2fr 1fr 1fr
+        gap: 10px
+        align-items: center
+        justify-items: center
+        margin-bottom: 24px
+        &__continue
+            cursor: pointer
+            padding: 15px 25px
+            font-weight: 700
+            font-size: 14px
+            line-height: 17px
+            color: #FFFFFF
+            background: #3CB3AB
+            border-radius: 33.5px
+            border: none
+            transition: background .3s linear
+            &:hover
+                background: #147A73
+        &__text
+            margin: 0
+            font-size: 15px
+            line-height: 28px
+            color: #7A7A7A
+            justify-self: start
+
+        &__input
+            justify-self: end
+            width: 150px
+            height: 47px
+            border: 1px solid rgba(0, 0, 0, 0.15)
+            padding: 0 30px
+            font-weight: 700
+            font-size: 14px
+            line-height: 17px
+            color: #000000
+            border-radius: 33.5px
+            background: url('../images/icon-dollar.svg') left 15px center no-repeat
+            &::-webkit-inner-spin-button
+                appearance: none
+            &:focus
+                outline: 2px solid hsl(172, 67%, 45%)

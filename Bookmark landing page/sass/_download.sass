@@ -1,0 +1,77 @@
+.download
+    &__title
+        margin: 0 0 16px
+        padding: 0
+        text-align: center
+        font-weight: 500
+        font-size: 32px
+        line-height: 52px
+        color: #242A45
+    &__text
+        margin: 0 0 48px
+        padding: 0
+        text-align: center
+        line-height: 28px
+        text-align: center
+        color: #242A45
+        opacity: 0.5
+    &__list
+        margin: 0 0 calc( 150px + 80px )
+        padding: 0
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        justify-items: center
+    &-item
+        padding: 24px
+        background: #FFFFFF
+        box-shadow: 0px 10px 20px -5px rgba(73, 93, 207, 0.20012)
+        border-radius: 15px
+        text-align: center
+        &:nth-child(2)
+            position: relative
+            top: 40px
+        &:nth-child(3)
+            position: relative
+            top: 80px
+        &__img
+            width: 100px
+            margin-bottom: 32px
+        &__title
+            margin: 0 0 6px
+            padding: 0
+            font-weight: 500
+            font-size: 20px
+            line-height: 24px
+            letter-spacing: 0.25px
+            color: #242A45
+        &__text
+            margin: 0 0 60px
+            padding: 0
+            font-size: 15px
+            line-height: 28px
+            color: #242A45
+            opacity: 0.5
+            position: relative
+            &::after
+                content: ''
+                width: 100%
+                position: absolute
+                left: 0
+                bottom: -30px
+                height: 4px
+                background: url('../images/bg-dots.svg')
+        &__link
+            padding: 8px 32px
+            font-weight: 500
+            font-size: 14px
+            line-height: 28px
+            letter-spacing: 0.25px
+            color: #FFFFFF
+            background: #5267DF
+            box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20012)
+            border: 2px solid #5267DF
+            border-radius: 5px
+            transition: background .3s ease-in, color .3s ease-in
+            &:hover
+                color: #5267DF
+                background: #fff

@@ -1,0 +1,48 @@
+.header
+    background: url('../images/image-hero-desktop.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    height: 400px
+    &__container
+        padding-top: 50px
+        align-items: center
+
+    &__logo
+        z-index: 10
+        width: 130px
+        height: 20px
+        justify-self: start
+        grid-column: 1 / 7
+
+    &__nav
+        z-index: 10
+        justify-self: end
+        grid-column: 7 / 13
+
+    &__list
+        margin: 0
+        padding: 0
+        list-style-type: none
+        display: grid
+        grid-template-columns: repeat(3, fit-content(100%))
+        gap: 30px
+
+    &__item
+        font-weight: 500
+        line-height: 16px
+        color: #FFFFFF
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            bottom: -2px
+            left: 0
+            height: 1px
+            background-color: #fff
+            width: 0
+            opacity: 0
+            transition: width .5s linear, opacity .5s linear
+        &:hover::after
+            width: 100%
+            opacity: 1

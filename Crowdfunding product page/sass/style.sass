@@ -1,0 +1,87 @@
+@import 'header'
+@import 'menu'
+@import 'hero'
+@import 'sales'
+@import 'about'
+@import 'modal'
+
+html
+    box-sizing: border-box
+    scroll-behavior: smooth
+
+*,
+*::before,
+*::after
+    box-sizing: inherit
+
+a
+    color: inherit
+    text-decoration: none
+
+img
+    max-width: 100%
+
+body
+    font-family: 'Commissioner', sans-serif
+    font-weight: 400
+    font-size: 16px
+
+main
+    background: #FAFAFA
+
+.container
+    width: 80vw
+    margin: 0 auto
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    gap: 30px
+    justify-content: center
+
+.wrapper
+    grid-column: 3 / 11
+    margin-bottom: 40px
+    background: #FFFFFF
+    border: 1px solid rgba(0, 0, 0, 0.0497193)
+    border-radius: 8px
+
+.stop-scroll
+    overflow: hidden
+
+.title
+    font-weight: 700
+    color: #000000
+
+.text
+    color: #7A7A7A
+
+.back
+    padding: 18px 40px
+    border: none
+    font-weight: 700
+    line-height: 20px
+    color: #FFFFFF
+    background: #3CB3AB
+    border-radius: 33.5px
+    cursor: pointer
+    transition: background .3s linear
+    &:hover
+        background: #147A73
+
+.overlay
+    z-index: 11
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background: #000
+    height: 0
+    opacity: 0.5
+    transition: height .5s linear
+    &--active
+        height: 100vh
+
+@keyframes opacity
+    0%
+        opacity: 0
+    100%
+        opacity: 1

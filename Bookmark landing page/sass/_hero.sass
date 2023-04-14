@@ -1,0 +1,53 @@
+.hero
+    margin-top: 100px
+    &__container
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: 1fr 50px
+        align-items: center
+        background: url('../images/rectangle-bg.svg') no-repeat left 660px bottom 0px
+    &-img
+        grid-column: 2 / 3
+        grid-row: 1
+    &-info
+        grid-column: 1 / 2
+        grid-row: 1
+        &__title
+            margin: 0 0 24px
+            padding: 0
+            font-weight: 500
+            font-size: 48px
+            line-height: 52px
+            color: #242A45
+        &__text
+            margin: 0 0 32px
+            padding: 0
+            line-height: 28px
+            color: #242A45
+            opacity: 0.5
+        &__links
+            a
+                padding: 8px 22px
+                font-weight: 500
+                font-size: 14px
+                line-height: 28px
+                letter-spacing: 0.25px
+                border-radius: 5px
+                box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.20012)
+                transition: color .3s ease-in, background .3s ease-in, border .3s ease-in
+                &:nth-child(1)
+                    color: #FFFFFF
+                    background-color: #5267DF
+                    border: 2px solid #5267DF
+                    margin-right: 16px
+                    &:hover
+                        background-color: #fff
+                        color: #5267DF
+                &:nth-child(2)
+                    color: #242A45
+                    opacity: 0.75
+                    background-color: #F7F7F7
+                    border: 2px solid #F7F7F7
+                    &:hover
+                        border: 2px solid #5B6074
+                        background: #FFFFFF

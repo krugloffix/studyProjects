@@ -1,0 +1,48 @@
+.hero
+    background-image: url('../images/bg-pattern-intro-desktop.svg'), linear-gradient(135deg, #FF8F71 0%, #FF3E55 100%)
+    background-position: left
+    background-repeat: no-repeat
+    border-radius: 0px 0px 0px 100px
+    padding-bottom: 155px
+
+.hero__title
+    margin: 0
+    padding-top: 225px
+    font-family: 'Overpass', sans-serif
+    font-style: normal
+    font-weight: 600
+    font-size: 64px
+    line-height: 98px
+    text-align: center
+    letter-spacing: -1.92px
+    color: #FFFFFF
+
+.hero__descr
+    margin: 0
+    font-family: 'Overpass', sans-serif
+    font-style: normal
+    font-weight: 400
+    font-size: 20px
+    line-height: 31px
+    text-align: center
+    color: #FFFFFF
+
+.hero__btns
+    margin-top: 43px
+    display: grid
+    grid-template-columns: repeat(2, fit-content(100%))
+    gap: 16px
+    justify-content: center
+
+.hero-btns__more
+    color: #FFFFFF
+    background: transparent
+    border: 1px solid #FFFFFF
+    transition: color .3s linear, background .3s linear, border .3s linear
+    &:hover
+        color: #FF7B86
+        background: #fff
+    &:active
+        color: #fff
+        background: #FF7B86
+        border: 1px solid transparent

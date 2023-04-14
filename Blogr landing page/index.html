@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/adaptive.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="./script.js" defer></script>
+    <title>Blogr Landing page</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a href="#" class="logo">
+          <img src="./images/logo.svg" alt="Blogr Logo" />
+        </a>
+        <div class="burger-menu">
+          <nav class="header__nav">
+            <ul class="header__list list-reset">
+              <li class="header__item header-item">
+                Product
+                <ul class="header-item__list list-reset">
+                  <li class="header-item__item"><a href="#">Overview</a></li>
+                  <li class="header-item__item"><a href="#">Pricing</a></li>
+                  <li class="header-item__item"><a href="#">Marketplace</a></li>
+                  <li class="header-item__item"><a href="#">Features</a></li>
+                  <li class="header-item__item">
+                    <a href="#">Integrations</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__item header-item">
+                Company
+                <ul class="header-item__list list-reset">
+                  <li class="header-item__item"><a href="#">About</a></li>
+                  <li class="header-item__item"><a href="#">Team</a></li>
+                  <li class="header-item__item"><a href="#">Blog</a></li>
+                  <li class="header-item__item"><a href="#">Careers</a></li>
+                </ul>
+              </li>
+              <li class="header__item header-item">
+                Connect
+                <ul class="header-item__list list-reset">
+                  <li class="header-item__item"><a href="#">Contact</a></li>
+                  <li class="header-item__item"><a href="#">Newsletter</a></li>
+                  <li class="header-item__item">
+                    <a href="#footer">LinkedIn</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__links header-links">
+            <a class="header-links__login header-link" href="#footer">Login</a>
+            <button
+              class="btn btn--white header-links__signup header-link btn-reset"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+        <button class="burger" aria-label="Open menu" aria-expanded="false">
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero__title">A modern publishing platform</h1>
+          <p class="hero__descr">
+            Grow your audience and build your online brand
+          </p>
+          <div class="hero__btns hero-btns">
+            <button class="btn btn--white hero-btns__free btn-reset">
+              Start for Free
+            </button>
+            <button class="btn hero-btns__more btn-reset">Learn More</button>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="container about__container">
+          <h2 class="about__title">Designed for the future</h2>
+          <div class="about__img about-img">
+            <div class="about-img__inner"></div>
+          </div>
+          <div class="about__content content">
+            <h3 class="content__title">Introducing an extensible editor</h3>
+            <p class="content__text">
+              Blogr features an exceedingly intuitive interface which lets you
+              focus on one thing: creating content. The editor supports
+              management of multiple blogs and allows easy manipulation of
+              embeds such as images, videos, and Markdown. Extensibility with
+              plugins and themes provide easy ways to add functionality or
+              change the looks of a blog.
+            </p>
+            <h3 class="content__title">Robust content management</h3>
+            <p class="content__text">
+              Flexible content management enables users to easily move through
+              posts. Increase the usability of your blog by adding customized
+              categories, sections, format, or flow. With this functionality,
+              you’re in full control.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="infrastructure">
+        <div class="container infrastructure__container">
+          <div class="infrastructure__img infrastructure-img">
+            <div class="infrastructure-img__inner"></div>
+          </div>
+          <div class="infrastructure__content content">
+            <h3 class="content__title content__title--light">
+              State of the Art Infrastructure
+            </h3>
+            <p class="content__text content__text--light">
+              With reliability and speed in mind, worldwide data centers provide
+              the backbone for ultra-fast connectivity. This ensures your site
+              will load instantly, no matter where your readers are, keeping
+              your site competitive.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="info">
+        <div class="container info__container">
+          <div class="info__img info-img">
+            <div class="info-img__inner"></div>
+          </div>
+          <div class="info__content content">
+            <h3 class="content__title">Free, open, simple</h3>
+            <p class="content__text">
+              Blogr is a free and open source application backed by a large
+              community of helpful developers. It supports features such as code
+              syntax highlighting, RSS feeds, social media integration,
+              third-party commenting tools, and works seamlessly with Google
+              Analytics. The architecture is clean and is relatively easy to
+              learn.
+            </p>
+            <h3 class="content__title">Powerful tooling</h3>
+            <p class="content__text">
+              Batteries included. We built a simple and straightforward CLI tool
+              that makes customization and deployment a breeze, but capable of
+              producing even the most complicated sites.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="container footer__container">
+        <a href="#" class="logo"
+          ><img src="./images/logo.svg" alt="Blogr Logo"
+        /></a>
+        <nav class="footer__nav">
+          <ul class="footer__list list-reset">
+            <li class="footer__item footer__item--title">Product</li>
+            <li class="footer__item"><a href="#">Overview</a></li>
+            <li class="footer__item"><a href="#">Pricing</a></li>
+            <li class="footer__item"><a href="#">Marketplace</a></li>
+            <li class="footer__item"><a href="#">Features</a></li>
+            <li class="footer__item"><a href="#">Integrations</a></li>
+          </ul>
+          <ul class="footer__list list-reset">
+            <li class="footer__item footer__item--title">Company</li>
+            <li class="footer__item"><a href="#">About</a></li>
+            <li class="footer__item"><a href="#">Team</a></li>
+            <li class="footer__item"><a href="#">Blog</a></li>
+            <li class="footer__item"><a href="#">Careers</a></li>
+          </ul>
+          <ul class="footer__list list-reset">
+            <li class="footer__item footer__item--title">Connect</li>
+            <li class="footer__item"><a href="#">Contact</a></li>
+            <li class="footer__item"><a href="#">Newsletter</a></li>
+            <li class="footer__item"><a href="#">LinkedIn</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

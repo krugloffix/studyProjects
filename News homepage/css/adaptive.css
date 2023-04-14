@@ -1,0 +1,108 @@
+@media only screen and (max-width: 1250px) {
+    .hero__main-description {
+        align-items: center;
+    }
+    .hero__main-description__left {
+        width: calc((960px - 100px) / 3);        
+    }
+    .hero__main-description__left h2 {
+        font-size: 50px;
+    }
+    .hero__main-description__right {
+        width: calc((960px - 100px) / 3);
+    }
+    .hero__new h3 {
+        margin: 0 0 20px;
+        font-size: 28px;
+    }
+    .hero__main-description__right button {
+        margin-top: 43px;
+    }
+    .articles__item a {
+        font-size: 18px;
+    }
+    .articles__item p {
+        margin: 10px 0 20px;
+    }
+    .articles__item:last-child p {
+        margin: 10px 0 0;
+    }
+    .suggestions__item-article__number {
+        margin: 0 0 10px;
+    }
+    .suggestions__item-article__text {
+        margin: 10px 0 0;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .hero__main-description {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .hero__main-description__left {
+        width: 100%;        
+    }
+    .hero__main-description__left h2 {
+        text-align: center;
+        font-size: 48px;
+    }
+    .hero__main-description__right {
+        margin: 20px 0 0 0;
+        width: 100%;
+    }
+    .hero__main-description__right button {
+        margin-top: 20px;
+    }
+    .suggestions__list {
+        gap: 0;
+    }
+    .suggestions__item-article {
+        padding: 0 15px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+    .header__container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .hero__container {
+        display: block;        
+    }
+    .hero__main {
+        margin-bottom: 50px;
+    }
+    .hero__new {
+        margin-bottom: 50px;
+    }
+    .suggestions__list {
+        display: block;
+    }
+    .suggestions__item:not(:last-child) {
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .nav__list {
+        display: flex;
+        gap: 0;
+        width: 320px;
+        overflow-x: scroll; 
+        justify-content: flex-start;
+        
+    }
+    .nav__item {
+        margin: 10px 10px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .nav__list {
+        width: 300px;
+    }
+}

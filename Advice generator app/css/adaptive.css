@@ -1,0 +1,20 @@
+@media only screen and (max-width : 576px) {
+    html {
+        font-size: 25px;
+    }
+    .wrapper {
+        display: block;        
+    }
+    .advice {
+        width: 375px;
+        min-width: 375px;
+        margin: 100px auto;
+    }
+    .advice__divider {
+        background-image: url('/images/pattern-divider-mobile.svg');
+        background-position: center;
+    }
+    .advice__button {
+        left: calc(375px / 2 - 64px / 2);
+    }
+}

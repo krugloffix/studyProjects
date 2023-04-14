@@ -1,0 +1,92 @@
+.burger
+    z-index: 10
+    padding: 0
+    display: none
+    justify-self: end
+    position: relative
+    width: 20px
+    height: 16px
+    border: none
+    cursor: pointer
+    background-color: transparent
+    &-line
+        position: absolute
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+        width: 100%
+        height: 3px
+        background-color: #fff
+    &::after,
+    &::before
+        content: ''
+        position: absolute
+        left: 0
+        width: 100%
+        height: 3px
+        background-color: #fff
+        transition: transform .3s linear
+    &::after
+        bottom: 0
+    &::before
+        top: 0
+    &--active .burger-line
+        opacity: 0
+    &--active::before
+        top: 50%
+        transform: rotate(45deg)
+    &--active::after
+        bottom: auto
+        top: 50%
+        transform: rotate(-45deg)
+    &-overlay
+        z-index: 5
+        top: 0
+        left: 0
+        width: 100%
+        transition: height .4s linear
+        height: 0
+        position: absolute
+        background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.0001) 100%)
+        opacity: 0.6
+        &--active
+            height: 100vh
+
+@media only screen and (max-width: 768px)
+    .burger
+        display: block
+        &-nav
+            display: none
+            width: 80vw
+            position: absolute
+            top: 90px
+            background: #FFFFFF
+            border: 1px solid rgba(0, 0, 0, 0.0497193)
+            border-radius: 8px
+            &--active
+                display: block
+                animation: opacity .4s both
+
+        &-list
+            grid-template-columns: 100%
+            grid-template-rows: repeat(3, fit-content(100%))
+            gap: 0
+        &-item
+            width: 100%
+            padding: 24px
+            font-size: 18px
+            line-height: 22px
+            align-items: center
+            color: #000000
+            position: relative
+            &:not(:last-child):after
+                content: ''
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 100%
+                height: 1px
+                background: #2F2F2F
+                opacity: 0.1
+            &:last-child:after
+                content: none
