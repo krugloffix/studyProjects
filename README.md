@@ -2,13 +2,6 @@
 
 <p>Here I have some of mine study projects. That I made while learning HTML and CSS.</p>
 
-<h3>Build with:</h3>
-
-» React JS <br>
-» React Redux <br>
-» Firebase <br>
-» SASS <br>
-
 <br>
 
 <h2>Screenshots of the Projects</h2>
