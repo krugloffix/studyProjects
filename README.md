@@ -21,7 +21,7 @@
 <br>
 <h3 align='center'>Crowdfund product page</h3>
 <div align='center'>
-<img src='./preview/preview-crowfund.png'/>
+<img src='./preview/preview-crowdfund.png'/>
 </div>
 
 <br>
