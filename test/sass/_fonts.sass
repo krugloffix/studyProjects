@@ -1,0 +1,61 @@
+@import 'mixins'
+@include font-face(GraphikB, "../../assets/fonts/Graphik-Bold-Web", 700, null, woff2)
+@include font-face(GraphikM, "../../assets/fonts/Graphik-Medium-Web", 500, null, woff2)
+@include font-face(GraphikR, "../../assets/fonts/Graphik-Regular-Web", 400, null, woff2)
+
+h1, h2
+    font-family: GraphikB
+
+h3, h4
+    font-family: GraphikM
+
+.p_lead, .p_18, p._16, .p_14
+    font-family: GraphikR
+
+h1
+    @include font-params(48px, 56px)
+    @media (max-width: 735px)
+        @include font-params(32px, 40px)
+    &--mobile
+        @include font-params(32px, 40px)
+    &--desktop
+        @include font-params(48px, 56px)
+
+h2
+    @include font-params(32px, 40px)
+    @media (max-width: 735px)
+        @include font-params(28px, 36px)
+    &--mobile
+        @include font-params(28px, 36px)
+    &--desktop
+        @include font-params(32px, 40px)
+
+h3
+    @include font-params(24px, 32px)
+    @media (max-width: 735px)
+        @include font-params(20px, 28px)
+    &--mobile
+        @include font-params(20px, 28px)
+    &--desktop
+        @include font-params(24px, 32px)
+
+h4
+    @include font-params(18px, 28px)
+
+.p_lead
+    @include font-params(24px, 32px)
+    @media (max-width: 735px)
+        @include font-params(20px, 28px)
+    &--mobile
+        @include font-params(20px, 28px)
+    &--desktop
+        @include font-params(24px, 32px)
+
+.p_18
+    @include font-params(18px, 28px)
+
+.p_16
+    @include font-params(16px, 24px)
+
+.p_14
+    @include font-params(14px, 20px)

@@ -1,0 +1,41 @@
+@import 'fonts'
+@import 'vars'
+@import 'header'
+@import 'burger'
+@import 'main'
+@import 'aside'
+@import 'intro'
+@import 'grid'
+
+html
+    box-sizing: border-box
+    scroll-behavior: smooth
+
+body
+    color: $color-main
+
+*,
+*::before,
+*::after
+    box-sizing: inherit
+
+a
+    color: inherit
+    text-decoration: none
+
+img
+    max-width: 100%
+
+.wrapper
+    margin: 0 auto
+    min-width: 1072px
+    max-width: 1312px
+    display: grid
+    grid-template-columns: repeat(12, minmax(60px, 80px))
+    grid-gap: 32px
+    position: relative
+
+.container
+    display: grid
+    grid-template-columns: repeat(9, minmax(60px, 80px))
+    grid-gap: 32px
