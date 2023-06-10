@@ -1,1 +1,0 @@
-{"version":3,"sources":["../sass/adaptive.sass","adaptive.css"],"names":[],"mappings":"AAAA;EACI;IACI,gBAAA;IACA,gBAAA;IACA,oDAAA;ECCN;EDAE;IACI,oDAAA;ECEN;EDDE;IACI,iBAAA;ECGN;EDFE;IACI,aAAA;ECIN;AACF;ADHA;EACI;IACI,gBAAA;IACA,gBAAA;IACA,oDAAA;IACA,cAAA;ECKN;EDJE;IACI,oDAAA;IACA,cAAA;ECMN;AACF","file":"adaptive.css"}
